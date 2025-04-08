@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.wellnessbuddy_user.ui.Home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_therapistFragment"
+            app:destination="@id/therapistFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_habbitsFragment"
+            app:destination="@id/habbitsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/therapistFragment"
+        android:name="com.example.wellnessbuddy_user.ui.Home.TherapistFragment"
+        android:label="fragment_therapist"
+        tools:layout="@layout/fragment_therapist" >
+        <action
+            android:id="@+id/action_therapistFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+        <action
+            android:id="@+id/action_therapistFragment_to_habbitsFragment"
+            app:destination="@id/habbitsFragment" />
+        <action
+            android:id="@+id/action_therapistFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.wellnessbuddy_user.ui.Home.CommunityFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community" >
+        <action
+            android:id="@+id/action_communityFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_habbitsFragment"
+            app:destination="@id/habbitsFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_therapistFragment"
+            app:destination="@id/therapistFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/habbitsFragment"
+        android:name="com.example.wellnessbuddy_user.ui.Home.HabbitsFragment"
+        android:label="fragment_habbits"
+        tools:layout="@layout/fragment_habbits" >
+        <action
+            android:id="@+id/action_habbitsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_habbitsFragment_to_therapistFragment"
+            app:destination="@id/therapistFragment" />
+        <action
+            android:id="@+id/action_habbitsFragment_to_communityFragment"
+            app:destination="@id/communityFragment" />
+    </fragment>
+</navigation>
