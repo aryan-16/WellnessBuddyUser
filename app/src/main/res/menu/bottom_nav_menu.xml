@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home_icon_white"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/nav_therapist"
+        android:icon="@drawable/therapist_icon_white"
+        android:title="Therapist"/>
+
+    <item
+        android:id="@+id/nav_community"
+        android:icon="@drawable/community_icon_white"
+        android:title="Community"/>
+
+    <item
+        android:id="@+id/nav_habbits"
+        android:icon="@drawable/habbit_icon_white"
+        android:title="Habbits"/>
+
+</menu>

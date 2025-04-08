@@ -9,30 +9,29 @@ import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.wellnessbuddy_user.R
 
-class LoginFragment : Fragment() {
 
-    private lateinit var textRegister: TextView
-    private lateinit var textForgotPass : TextView
+class SignupFragment : Fragment() {
+
+   private lateinit var textLogin : TextView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_signup, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        textRegister = view.findViewById(R.id.textRegister)
-        textRegister.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_signupFragment)
+        textLogin = view.findViewById(R.id.textLogin)
+        textLogin.setOnClickListener {
+            findNavController().navigate(R.id.action_signupFragment_to_loginFragment)
         }
 
-        textForgotPass = view.findViewById(R.id.textForgotPass)
-        textForgotPass.setOnClickListener {
-            findNavController().navigate(R.id.action_loginFragment_to_forgotPassFragment)
-        }
+
     }
-}
+
+
+    }
